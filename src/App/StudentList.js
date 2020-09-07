@@ -20,6 +20,10 @@ class StudentList extends Component {
   componentDidMount() {
     this.fetchStudentList();
   }
+
+  addStudent = ()=>{
+    alert("add Students")
+  }
   render() {
     return (
       <div data-testid="app" className="App">
@@ -29,6 +33,7 @@ class StudentList extends Component {
         <table className="student_table">
           <tbody>
             <tr>
+              <span onClick={this.addStudent}>添加学员</span>
               {this.state.studentList.map(s => 
                 <span>{s.id}. {s.name}</span>)}
             </tr>
