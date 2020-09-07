@@ -1,2 +1,44 @@
+@import '../style/variables';
 .App {
+    background-color: $bg-gray;
+    .team_head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px;
+        button {
+            background-color:$primary-color;
+            border: none;
+            color: white;
+            width: 140px;
+            height: 40px;
+            font-weight: bolder;
+        }
+    }
+    .team_content{
+        border: 1px solid $dark-gray;
+        margin: 15px;
+
+        input {
+
+        }
+    }
+    .team_table {
+        width: 100%;
+        thead {
+            background-color: $dark-gray;
+            color:white
+        }
+        tbody tr {
+            height: 40px;
+            span {
+                background-color: $light-gray;
+                margin: 20px;
+                border-radius: .25em;
+                padding:.2em .6em .3em;
+            }
+        }
+    }
+
 }
+
