@@ -16,7 +16,6 @@
         }
     }
     .team_content{
-        border: 1px solid $dark-gray;
         margin: 15px;
 
         input {
@@ -25,12 +24,31 @@
     }
     .team_table {
         width: 100%;
+        border: 1px solid $dark-gray;
+        margin-bottom: 15px;
         thead {
             background-color: $dark-gray;
-            color:white
+            color:white;
+            tr {
+                height: 30px;
+            }
         }
         tbody tr {
-            height: 40px;
+            height: 60px;
+            span {
+                background-color: $light-gray;
+                margin: 20px;
+                border-radius: .25em;
+                padding:.2em .6em .3em;
+            }
+        }
+    }
+    .student_table{
+        width: 100%;
+        // border: 1px solid $dark-gray;
+        margin-bottom: 15px;
+        tbody tr {
+            height: 60px;
             span {
                 background-color: $light-gray;
                 margin: 20px;

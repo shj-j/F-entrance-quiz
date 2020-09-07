@@ -18,7 +18,9 @@ class TeamList extends Component {
         </thead>
         <tbody>
           <tr>
-            <td>{Object.keys(nameList).map(k => (<span>{k}. {nameList[k]}</span>))}</td>
+            {/* <td>{Object.keys(nameList).map(k => (
+              <span>{nameList[k].id}. {nameList[k].name}</span>
+            ))}</td> */}
           </tr>
         </tbody>
       </table>
