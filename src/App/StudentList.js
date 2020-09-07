@@ -21,8 +21,19 @@ class StudentList extends Component {
     this.fetchStudentList();
   }
 
-  addStudent = ()=>{
+  addStudent = (value)=>{
     alert("add Students")
+    const student = JSON.stringify({"name":value})
+    fetch(URL + '/students', {
+      method: 'POST',
+      body: student,
+    }).then(res => res.json())
+      .then(data => {
+        console.log("student:", data)
+        this.setState({
+          studentList: data
+        })
+      })
   }
   render() {
     return (
