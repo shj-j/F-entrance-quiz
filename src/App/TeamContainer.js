@@ -25,8 +25,21 @@ class TeamContainer extends Component {
     })
   }
 
+  fetchGroupingData = ()=>{
+    fetch(URL+'/grouping',{
+      method:'POST'
+    }).then(res => res.json())
+    .then(data => {
+      console.log("group:",data)
+      this.setState({
+        teamList: data
+      })
+    })
+  }
+
   handleGrouping = () => {
     alert("handleGrouping");
+    this.fetchGroupingData();
   }
   render() {
     return (

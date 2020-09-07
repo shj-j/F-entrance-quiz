@@ -24,7 +24,7 @@ class StudentList extends Component {
   addStudent = (value)=>{
     alert("add Students")
     const student = JSON.stringify({"name":value})
-    fetch(URL + '/students', {
+    fetch(URL + '/student', {
       method: 'POST',
       body: student,
     }).then(res => res.json())
@@ -44,7 +44,7 @@ class StudentList extends Component {
         <table className="student_table">
           <tbody>
             <tr>
-              <span onClick={this.addStudent}>添加学员</span>
+              <span onClick={this.addStudent}>+添加学员</span>
               {this.state.studentList.map(s => 
                 <span>{s.id}. {s.name}</span>)}
             </tr>
